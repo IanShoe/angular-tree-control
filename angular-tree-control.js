@@ -210,7 +210,6 @@
                           '<li ng-repeat="node in node.' + $scope.options.nodeChildren + ' track by ' + $scope.options.trackBy + ' | filter:filterExpression:filterComparator ' + orderBy + '" ng-class="headClass(node)" '+classIfDefined($scope.options.injectClasses.li, true)+'>' +
                               '<div class="tree-label-container">' +
                                   '<i class="tree-branch-head" ng-class="iBranchClass()" ng-click="selectNodeHead(node)"></i>' +
-                                  '<i class="tree-leaf-head '+classIfDefined($scope.options.injectClasses.iLeaf, false)+'"></i>' +
                                   '<div class="tree-label '+classIfDefined($scope.options.injectClasses.label, false)+'" ng-class="selectedClass()" ng-click="selectNodeLabel(node)" tree-transclude></div>' +
                               '</div>' +
                               '<treeitem ng-if="nodeExpanded()"></treeitem>' +
