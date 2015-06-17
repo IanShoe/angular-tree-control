@@ -222,7 +222,7 @@
 
                         scope.$watch("treeModel", function updateNodeOnRootScope(newValue) {
                             if (angular.isArray(newValue)) {
-                                if (angular.isDefined(scope.node) && angular.equals(scope.node[scope.options.nodeChildren], newValue))
+                                if (angular.isDefined(scope.node) && scope.node[scope.options.nodeChildren] === newValue)
                                     return;
                                 scope.node = {};
                                 scope.synteticRoot = scope.node;
