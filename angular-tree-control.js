@@ -251,7 +251,7 @@
                 }
                 scope.node = newValue;
               }
-            }, true);
+            });
 
             scope.$watchCollection('expandedNodes', function(newValue) {
               var notFoundIds = 0;
