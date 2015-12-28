@@ -223,7 +223,7 @@
           var orderBy = $scope.orderBy ? ' | orderBy:orderBy:reverseOrder' : '';
           var template =
             '<ul ' + classIfDefined($scope.options.injectClasses.ul, true) + '>' +
-              '<li ng-repeat="node in node.' + $scope.options.nodeChildren + ' track by ' + $scope.options.trackBy + ' | filter:filterExpression:filterComparator ' + orderBy + '" ng-class="headClass(node)" ' + classIfDefined($scope.options.injectClasses.li, true) + '>' +
+              '<li ng-repeat="node in node.' + $scope.options.nodeChildren + ' | filter:filterExpression:filterComparator ' + orderBy + ' track by ' + $scope.options.trackBy + '" ng-class="headClass(node)" ' + classIfDefined($scope.options.injectClasses.li, true) + '>' +
                 '<div class="tree-label-container">' +
                   '<i class="tree-branch-head" ng-class="iBranchClass()" ng-click="selectNodeHead(node)"></i>' +
                   '<div class="tree-label ' + classIfDefined($scope.options.injectClasses.label, false) + '" ng-class="selectedClass()" ng-click="selectNodeLabel(node)" tree-transclude></div>' +
